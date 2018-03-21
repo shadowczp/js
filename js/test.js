@@ -1,18 +1,20 @@
 function doThisLater() {
     alert("haha")
 }
-
+function test(num1,num2) {
+    var arr=[1,2,3,4,5,6]
+    alert(arr.reduce(function (a,b) {
+        return a+b
+    }))
+}
 function click1() {
-    //这里返回一个计时器ID
-    var timeId = setTimeout(doThisLater, 2000)
-    //可以清除计时器阻止执行
-    //clearTimeout(timeId)
+    localStorage.userName='岑志鹏'
+    document.getElementById("name").setAttribute("value",localStorage.userName)
 }
 
 window.onload = function (ev) {
-    var div1 = document.getElementById('div1')
-    div1.ondragenter=function (ev2) {
-        ev2.target.innerHTML='dd'
-    }
+    document.getElementById("name").setAttribute("value",localStorage.userName)
+    test(10)
 }
+
 
